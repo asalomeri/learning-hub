@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="فهرس عربي تفاعلي لدروس البرمجة القصيرة.">
+    <title>مركز التعلّم | دروس برمجة بالعربية</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="مركز التعلّم، الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>مركز التعلّم</span>
+      </a>
+      <span class="header-note">تعلّم البرمجة خطوة بخطوة</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">مكتبة عربية صغيرة للمبرمجين</p>
+        <h1 id="page-title">ابحث عن درسك القادم</h1>
+        <p class="hero-copy">دروس قصيرة تساعدك على فهم أساسيات البرمجة والتدرّب عليها.</p>
+        <p class="demo-note"><span aria-hidden="true">✦</span> نسخة أولية — المحتوى الحالي أمثلة تعليمية قابلة للتوسّع.</p>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">استكشف المحتوى</p>
+            <h2 id="catalog-title">فهرس الدروس</h2>
+          </div>
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+        </div>
+
+        <form class="filters" role="search" onsubmit="return false">
+          <div class="search-field">
+            <label for="search">ابحث بكلمة أو موضوع</label>
+            <input id="search" type="search" placeholder="مثال: الحلقات، HTML، مبتدئ" autocomplete="off">
+          </div>
+          <div class="select-field">
+            <label for="language-filter">اللغة</label>
+            <select id="language-filter">
+              <option value="">كل اللغات</option>
+            </select>
+          </div>
+          <div class="select-field">
+            <label for="level-filter">المستوى</label>
+            <select id="level-filter">
+              <option value="">كل المستويات</option>
+            </select>
+          </div>
+          <button class="reset-button" id="reset-filters" type="button">مسح الفلاتر</button>
+        </form>
+
+        <div id="lesson-list" class="lesson-grid" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>ما لقينا دروس تطابق بحثك. جرّب كلمة ثانية أو امسح الفلاتر.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>مركز التعلّم — تعلّم وجرّب وشارك ما تتعلّمه.</p>
+      <a href="https://github.com/asalomeri/learning-hub">المشروع على GitHub</a>
+    </footer>
+  </body>
+</html>
